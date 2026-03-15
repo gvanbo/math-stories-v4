@@ -1,0 +1,28 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "Stores student progress and mastered math outcomes.",
+      "type": "object",
+      "properties": {
+        "masteredOutcomes": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "List of math skill codes the student has mastered."
+        },
+        "lastUpdated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO timestamp of the last progress update."
+        }
+      },
+      "required": ["masteredOutcomes"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Individual user progress documents."
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Math Story Studio",
+  "description": "An immersive Grade 4 math learning experience using stories and real-time voice interaction based on the Alberta curriculum.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}
